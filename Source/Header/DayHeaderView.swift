@@ -7,9 +7,9 @@ public class DayHeaderView: UIView {
 
   public var calendar = Calendar.autoupdatingCurrent
 
-  var style = DayHeaderStyle()
+  public var style = DayHeaderStyle()
 
-  weak var state: DayViewState? {
+  public weak var state: DayViewState? {
     willSet(newValue) {
       state?.unsubscribe(client: self)
     }
